@@ -21,4 +21,29 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+# UP and Running
+
+Copy environment variable files (change values if needed)
+
+```
+cp .env-sample .env
+```
+
+Build the required containers
+
+```
+docker-compose build
+```
+
+Create development and test databases
+
+```
+docker-compose run web bundle exec rails db:prepare
+```
+
+Run application with database
+```
+docker-compose up
+```
+
+Enjoy!
